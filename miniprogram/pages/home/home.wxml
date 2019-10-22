@@ -1,0 +1,74 @@
+<van-notice-bar
+mode="closeable"
+scrollable="true"
+  text="关注“大学生学科竞赛”公众号，获取更多及时准确的赛事信息！"
+/>
+<van-row>
+  <van-col span="8">
+  <van-popup
+  show="{{ show }}"
+  position="top"
+  custom-style="height: 280px;"
+  bind:close="onClose"
+>
+<van-row>
+<text>\n</text>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="英语竞赛">英语竞赛</van-button></van-col>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="计算机类">计算机类</van-button></van-col>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="数学建模">数学建模</van-button></van-col>
+  <text>\n</text>    <text>\n</text>  <text>\n</text> 
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="创新创业">创新创业</van-button></van-col>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="生物化学">生物化学</van-button></van-col>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="财经金融">财经金融</van-button></van-col>
+  <text>\n</text><text>\n</text> <text>\n</text> 
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="文学征稿">文学征稿</van-button></van-col>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="医学技能">医学技能</van-button></van-col>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="广告艺术">广告艺术</van-button></van-col>
+  <text>\n</text>  <text>\n</text>  <text>\n</text>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="名企实习">名企实习</van-button></van-col>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="志愿服务">志愿服务</van-button></van-col>
+  <van-col span="8"><text decode="{{true}}">&ensp;</text><van-button round type="info" bind:click="showCategory" id="其他类别">其他类别</van-button></van-col>
+</van-row>
+</van-popup>  
+  <van-button square type="primary" block bind:click="showPopup">学科分类</van-button></van-col>  
+  <van-col span="8" >
+<van-button square type="primary" block  bindtap="popTest"color="red">赛事资料</van-button></van-col>
+  <van-col span="8" >
+<van-button square type="primary" block  bindtap="onTapToAll"color="dodgerblue">所有竞赛</van-button></van-col>
+</van-row>
+   <view class='search'>
+            <input type='text' placeholder='输入你想要的内容' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='searchTest'></input>
+            <van-button  icon="search" type="primary"  size="small" bind:click="searchTest0" >搜索</van-button>
+        </view>
+  <swiper indicator-dots="true" autoplay="true" interval="3000" >
+  <swiper-item>
+     <image src = "https://mmbiz.qpic.cn/mmbiz_png/mU6yyVZ0x4Kh6ibOricGectQXib08g8fFN6eUwKq2PGnxcbIxmjuM06HnPpMibNGoQfl1e40aCwwAENykLdoPVworw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"  bindtap="onTapToDetail" id="dc0430be5dad9c830161ac8427f373c1"/>
+  </swiper-item>
+    <swiper-item>
+     <image src = "https://mmbiz.qpic.cn/mmbiz_jpg/mU6yyVZ0x4Kh6ibOricGectQXib08g8fFN6lzh6IBazSDUTlibdHrcRSTfLOBctBScq6QgMAic1aichtmL0CibxL2ib6Eg/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"  bindtap="onTapToDetail" id="57964ec45dadaaed017b8fa87fb1e17b"/>
+  </swiper-item>
+    <swiper-item>
+     <image src = "https://mmbiz.qpic.cn/mmbiz_png/mU6yyVZ0x4JvCoWs6JHykB4q9Br4Sk3jVKwWSFpFd5MAhq16E6oQPqtq96ToA22bV043ZLZaKrIJHHZRcnfAmQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"  bindtap="onTapToDetail" id="dc0430be5dada4d801695a9f42d6b715"/>
+  </swiper-item>
+    <swiper-item>
+     <image src = "https://mmbiz.qpic.cn/mmbiz_jpg/mU6yyVZ0x4LibwrZtWcNRFChyRc7wcISxnMV771xVGdKdNiaUG1C4Wh94UYkCavpnovtHAOALM81tvnOnNZTSLHQ/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1"  bindtap="onTapToDetail" id="0bb54c1c5dada6d3016b17a07c411fd3"/>
+  </swiper-item>
+  </swiper>
+
+  <block wx:for="{{test}}" wx:for-item = "item" > 
+<view class="post-container" data-post-id="{{postId}}" bindtap="onTapToDetail" id="{{item._id}}">
+    <view class = "post-author-date">
+        <image src = "/images/avatar/avatar(5).jpg"/>
+        <text class = "post-title">{{item.title}}</text>
+    </view>
+  
+    <view class="post-test">
+    <image src = "{{item.avatar}}" />
+      <text class = "item.post-content">
+     {{item.content}}
+      </text>
+    </view>
+  </view>
+    </block>
+
+<van-button square type="primary" block plain  bindtap="onTapJump">已经到底啦~点此返回顶部</van-button>

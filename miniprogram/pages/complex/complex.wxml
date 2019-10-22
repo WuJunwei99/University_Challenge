@@ -1,0 +1,5 @@
+<block wx:for="{{test}}" wx:for-item = "item" > 
+<web-view src="{{item.website}}"></web-view>
+</block>
+
+

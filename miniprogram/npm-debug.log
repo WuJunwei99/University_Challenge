@@ -1,0 +1,298 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Studytools\\node\\node.exe',
+1 verbose cli   'D:\\Studytools\\node\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'miniprogram-datepicker',
+1 verbose cli   '--production' ]
+2 info using npm@2.15.1
+3 info using node@v4.4.3
+4 verbose install initial load of D:\Workspace\xiaochengxu\新的小程序\miniprogram\package.json
+5 verbose installManyTop reading scoped package data from D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\vant-weapp\package.json
+6 verbose readDependencies loading dependencies from D:\Workspace\xiaochengxu\新的小程序\miniprogram\package.json
+7 silly cache add args [ 'miniprogram-datepicker', null ]
+8 verbose cache add spec miniprogram-datepicker
+9 silly cache add parsed spec Result {
+9 silly cache add   raw: 'miniprogram-datepicker',
+9 silly cache add   scope: null,
+9 silly cache add   name: 'miniprogram-datepicker',
+9 silly cache add   rawSpec: '',
+9 silly cache add   spec: 'latest',
+9 silly cache add   type: 'tag' }
+10 silly addNamed miniprogram-datepicker@latest
+11 verbose addNamed "latest" is being treated as a dist-tag for miniprogram-datepicker
+12 info addNameTag [ 'miniprogram-datepicker', 'latest' ]
+13 silly mapToRegistry name miniprogram-datepicker
+14 silly mapToRegistry using default registry
+15 silly mapToRegistry registry https://registry.npmjs.org/
+16 silly mapToRegistry data Result {
+16 silly mapToRegistry   raw: 'miniprogram-datepicker',
+16 silly mapToRegistry   scope: null,
+16 silly mapToRegistry   name: 'miniprogram-datepicker',
+16 silly mapToRegistry   rawSpec: '',
+16 silly mapToRegistry   spec: 'latest',
+16 silly mapToRegistry   type: 'tag' }
+17 silly mapToRegistry uri https://registry.npmjs.org/miniprogram-datepicker
+18 verbose addNameTag registry:https://registry.npmjs.org/miniprogram-datepicker not in flight; fetching
+19 verbose request uri https://registry.npmjs.org/miniprogram-datepicker
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 17:24:42
+22 verbose request id a84f5b748df85ec5
+23 http request GET https://registry.npmjs.org/miniprogram-datepicker
+24 http 200 https://registry.npmjs.org/miniprogram-datepicker
+25 verbose headers { date: 'Tue, 08 Oct 2019 09:24:43 GMT',
+25 verbose headers   'content-type': 'application/json',
+25 verbose headers   'transfer-encoding': 'chunked',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'set-cookie': [ '__cfduid=dc9214d1c1cf4130e287a645a7774d11e1570526683; expires=Wed, 07-Oct-20 09:24:43 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+25 verbose headers   'cf-cache-status': 'HIT',
+25 verbose headers   'cache-control': 'max-age=300',
+25 verbose headers   'cf-ray': '52271039bfd3e50a-LAX',
+25 verbose headers   age: '3497',
+25 verbose headers   etag: 'W/"245c3382a6b518b2866fc7b49070a5c4"',
+25 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+25 verbose headers   'last-modified': 'Thu, 28 Feb 2019 08:53:56 GMT',
+25 verbose headers   vary: 'accept-encoding, accept',
+25 verbose headers   'x-amz-meta-rev': '5-cee9ff14678c551e0eefbf9d9c0733a6',
+25 verbose headers   server: 'cloudflare',
+25 verbose headers   'content-encoding': 'gzip' }
+26 silly get cb [ 200,
+26 silly get   { date: 'Tue, 08 Oct 2019 09:24:43 GMT',
+26 silly get     'content-type': 'application/json',
+26 silly get     'transfer-encoding': 'chunked',
+26 silly get     connection: 'keep-alive',
+26 silly get     'set-cookie': [ '__cfduid=dc9214d1c1cf4130e287a645a7774d11e1570526683; expires=Wed, 07-Oct-20 09:24:43 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+26 silly get     'cf-cache-status': 'HIT',
+26 silly get     'cache-control': 'max-age=300',
+26 silly get     'cf-ray': '52271039bfd3e50a-LAX',
+26 silly get     age: '3497',
+26 silly get     etag: 'W/"245c3382a6b518b2866fc7b49070a5c4"',
+26 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+26 silly get     'last-modified': 'Thu, 28 Feb 2019 08:53:56 GMT',
+26 silly get     vary: 'accept-encoding, accept',
+26 silly get     'x-amz-meta-rev': '5-cee9ff14678c551e0eefbf9d9c0733a6',
+26 silly get     server: 'cloudflare',
+26 silly get     'content-encoding': 'gzip' } ]
+27 verbose get saving miniprogram-datepicker to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npmjs.org\miniprogram-datepicker\.cache.json
+28 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+29 silly addNameTag next cb for miniprogram-datepicker with tag latest
+30 silly addNamed miniprogram-datepicker@0.3.0
+31 verbose addNamed "0.3.0" is a plain semver version for miniprogram-datepicker
+32 silly mapToRegistry name miniprogram-datepicker
+33 silly mapToRegistry using default registry
+34 silly mapToRegistry registry https://registry.npmjs.org/
+35 silly mapToRegistry data Result {
+35 silly mapToRegistry   raw: 'miniprogram-datepicker',
+35 silly mapToRegistry   scope: null,
+35 silly mapToRegistry   name: 'miniprogram-datepicker',
+35 silly mapToRegistry   rawSpec: '',
+35 silly mapToRegistry   spec: 'latest',
+35 silly mapToRegistry   type: 'tag' }
+36 silly mapToRegistry uri https://registry.npmjs.org/miniprogram-datepicker
+37 verbose addRemoteTarball https://registry.npmjs.org/miniprogram-datepicker/-/miniprogram-datepicker-0.3.0.tgz not in flight; adding
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/miniprogram-datepicker/-/miniprogram-datepicker-0.3.0.tgz',
+38 verbose addRemoteTarball   '852180ee159e1508ec6db53d2cbf5cca48940baa' ]
+39 info retry fetch attempt 1 at 17:24:42
+40 info attempt registry request try #1 at 17:24:42
+41 http fetch GET https://registry.npmjs.org/miniprogram-datepicker/-/miniprogram-datepicker-0.3.0.tgz
+42 http fetch 200 https://registry.npmjs.org/miniprogram-datepicker/-/miniprogram-datepicker-0.3.0.tgz
+43 silly fetchAndShaCheck shasum 852180ee159e1508ec6db53d2cbf5cca48940baa
+44 verbose addTmpTarball C:\Users\ADMINI~1\AppData\Local\Temp\npm-7936-4980fe2d\registry.npmjs.org\miniprogram-datepicker\-\miniprogram-datepicker-0.3.0.tgz not in flight; adding
+45 verbose addTmpTarball already have metadata; skipping unpack for miniprogram-datepicker@0.3.0
+46 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+47 silly cache afterAdd miniprogram-datepicker@0.3.0
+48 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\miniprogram-datepicker\0.3.0\package\package.json not in flight; writing
+49 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+50 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\miniprogram-datepicker\0.3.0\package\package.json written
+51 silly install resolved [ { name: 'miniprogram-datepicker',
+51 silly install resolved     version: '0.3.0',
+51 silly install resolved     description: 'miniprogram datepicker',
+51 silly install resolved     main: 'miniprogram_dist/index.js',
+51 silly install resolved     scripts:
+51 silly install resolved      { dev: 'gulp dev --develop',
+51 silly install resolved        watch: 'gulp watch --develop --watch',
+51 silly install resolved        build: 'gulp',
+51 silly install resolved        dist: 'npm run build',
+51 silly install resolved        'clean-dev': 'gulp clean --develop',
+51 silly install resolved        clean: 'gulp clean',
+51 silly install resolved        test: 'jest ./test/* --silent --bail',
+51 silly install resolved        coverage: 'jest ./test/* --coverage --bail',
+51 silly install resolved        lint: 'eslint "src/**/*.js"',
+51 silly install resolved        'lint-tools': 'eslint "tools/**/*.js" --rule "import/no-extraneous-dependencies: false"' },
+51 silly install resolved     miniprogram: 'miniprogram_dist',
+51 silly install resolved     jest:
+51 silly install resolved      { testEnvironment: 'jsdom',
+51 silly install resolved        testURL: 'https://jest.test',
+51 silly install resolved        collectCoverageFrom: [Object],
+51 silly install resolved        moduleDirectories: [Object] },
+51 silly install resolved     repository:
+51 silly install resolved      { type: 'git',
+51 silly install resolved        url: 'git+https://github.com/pithyone/miniprogram-datepicker.git' },
+51 silly install resolved     keywords: [ 'miniprogram', 'datepicker' ],
+51 silly install resolved     author: { name: '王兵' },
+51 silly install resolved     license: 'MIT',
+51 silly install resolved     devDependencies:
+51 silly install resolved      { 'babel-core': '^6.26.3',
+51 silly install resolved        'babel-loader': '^7.1.5',
+51 silly install resolved        'babel-plugin-module-resolver': '^3.1.1',
+51 silly install resolved        'babel-preset-env': '^1.7.0',
+51 silly install resolved        colors: '^1.3.1',
+51 silly install resolved        eslint: '^5.3.0',
+51 silly install resolved        'eslint-config-airbnb-base': '13.1.0',
+51 silly install resolved        'eslint-loader': '^2.1.0',
+51 silly install resolved        'eslint-plugin-import': '^2.14.0',
+51 silly install resolved        'eslint-plugin-node': '^7.0.1',
+51 silly install resolved        'eslint-plugin-promise': '^3.8.0',
+51 silly install resolved        gulp: '^4.0.0',
+51 silly install resolved        'gulp-clean': '^0.4.0',
+51 silly install resolved        'gulp-if': '^2.0.2',
+51 silly install resolved        'gulp-install': '^1.1.0',
+51 silly install resolved        'gulp-less': '^4.0.1',
+51 silly install resolved        'gulp-rename': '^1.4.0',
+51 silly install resolved        'gulp-sourcemaps': '^2.6.4',
+51 silly install resolved        jest: '^23.5.0',
+51 silly install resolved        'miniprogram-simulate': 'latest',
+51 silly install resolved        through2: '^2.0.3',
+51 silly install resolved        vinyl: '^2.2.0',
+51 silly install resolved        webpack: '^4.16.5',
+51 silly install resolved        'webpack-node-externals': '^1.7.2' },
+51 silly install resolved     dependencies: { calendar: 'github:pithyone/calendar.js' },
+51 silly install resolved     gitHead: '43d28083300f0248aa8a10dd539c31d116a4f48d',
+51 silly install resolved     bugs: { url: 'https://github.com/pithyone/miniprogram-datepicker/issues' },
+51 silly install resolved     homepage: 'https://github.com/pithyone/miniprogram-datepicker#readme',
+51 silly install resolved     _id: 'miniprogram-datepicker@0.3.0',
+51 silly install resolved     _nodeVersion: '10.14.2',
+51 silly install resolved     _npmVersion: '6.7.0',
+51 silly install resolved     dist:
+51 silly install resolved      { integrity: 'sha512-G2JgKIDn/W2E43yx9u0v3tNteK54FZTvqhLFmU75+i8X119p0aOhgd0meTyqZrJ3r20JBR6ZVoyIIuWD0wJjXw==',
+51 silly install resolved        shasum: '852180ee159e1508ec6db53d2cbf5cca48940baa',
+51 silly install resolved        tarball: 'https://registry.npmjs.org/miniprogram-datepicker/-/miniprogram-datepicker-0.3.0.tgz',
+51 silly install resolved        fileCount: 15,
+51 silly install resolved        unpackedSize: 19505,
+51 silly install resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcd6GgCRA9TVsSAnZWagAAsf0QAJ+Ff9+cUO3/JKCIGKME\nzXVcfhQNVDnq+5R8719x2XKdss+kbCrHg46jqhWtk92geuxWLU40zJsIvou+\nrK76SFGjxKrD6keM6x4VreDj/GPIlyN+WkKul1mjrAq4ZgxiuisbSykRzzph\nLoR+4eDT+Pzity1+73obXL7hx0TaZMeGNCIyfRXlBfwN+uNe9aZNRvG43/xa\nxvCyJWHLa3EmIqtcOCZWIjyblSWDNg6eYxezLuAbZfpkksn0rF0yixUya70G\nJ85C52ZnTk2hhxCmCECXEM293adg+Qm3ELmWLO72kYXDwwJIiSnYdGgh2zEw\neHyyO6lOZ2Hti7sQ4gXjQEhtGz6IS/vXNGeISY7sJZWXFclX2BeFP9gz3bTy\njawuqQ86Rxucr1Ww+ufN4KDxbJUUqFlp2EkgEXFrmEwDR6/qCdnK+o80BkYD\n8dhgQTSP43TtYDjB+qJDmKlWk3LodezGi7RAfS1ofRNyuiR5213qav36Ivap\nnF4blVc5ws+PuTpbD9HPSZt7BDctD29KTVIAh2j2D8x/iXGgRdAJCdwYsBKa\nzflZnN8+V3Iqbxg0EDRnDtZIjg/c3OfKfF43P2vh2PZoxblRcmsfKiOaqrsN\nFZh+cJ/vifKz5zA1EBYCzwYzWh/6LZ0LKvgTMA8LPZ7IalXRCVt/4gZTvAU1\n/Vv1\r\n=XOmA\r\n-----END PGP SIGNATURE-----\r\n' },
+51 silly install resolved     maintainers: [ [Object] ],
+51 silly install resolved     _npmUser: { name: 'pithyone', email: 'pithyone@vip.qq.com' },
+51 silly install resolved     directories: {},
+51 silly install resolved     _npmOperationalInternal:
+51 silly install resolved      { host: 's3://npm-registry-packages',
+51 silly install resolved        tmp: 'tmp/miniprogram-datepicker_0.3.0_1551344032352_0.15872058630376307' },
+51 silly install resolved     _hasShrinkwrap: false,
+51 silly install resolved     _shasum: '852180ee159e1508ec6db53d2cbf5cca48940baa',
+51 silly install resolved     _resolved: 'https://registry.npmjs.org/miniprogram-datepicker/-/miniprogram-datepicker-0.3.0.tgz',
+51 silly install resolved     _from: 'miniprogram-datepicker@latest' } ]
+52 info install miniprogram-datepicker@0.3.0 into D:\Workspace\xiaochengxu\新的小程序\miniprogram
+53 info installOne miniprogram-datepicker@0.3.0
+54 verbose installOne of miniprogram-datepicker to D:\Workspace\xiaochengxu\新的小程序\miniprogram not in flight; installing
+55 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+56 verbose lock using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\miniprogram-datepicker-4718d94144c139bf.lock for D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+57 silly install write writing miniprogram-datepicker 0.3.0 to D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+58 verbose unbuild node_modules\miniprogram-datepicker
+59 silly gentlyRm D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker is being purged from base D:\Workspace\xiaochengxu\新的小程序\miniprogram
+60 verbose gentlyRm don't care about contents; nuking D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+61 verbose tar unpack C:\Users\Administrator\AppData\Roaming\npm-cache\miniprogram-datepicker\0.3.0\package.tgz
+62 verbose tar unpacking to D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+63 silly gentlyRm D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker is being purged
+64 verbose gentlyRm don't care about contents; nuking D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+65 silly gunzTarPerm modes [ '777', '666' ]
+66 silly gunzTarPerm extractEntry package.json
+67 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+68 silly gunzTarPerm extractEntry .babelrc
+69 silly gunzTarPerm modified mode [ '.babelrc', 420, 438 ]
+70 silly gunzTarPerm extractEntry .eslintrc.js
+71 silly gunzTarPerm modified mode [ '.eslintrc.js', 420, 438 ]
+72 silly gunzTarPerm extractEntry .travis.yml
+73 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+74 silly gunzTarPerm extractEntry gulpfile.js
+75 silly gunzTarPerm modified mode [ 'gulpfile.js', 420, 438 ]
+76 silly gunzTarPerm extractEntry LICENSE
+77 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+78 silly gunzTarPerm extractEntry README.md
+79 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+80 silly gunzTarPerm extractEntry miniprogram_dist/index.js
+81 silly gunzTarPerm modified mode [ 'miniprogram_dist/index.js', 420, 438 ]
+82 silly gunzTarPerm extractEntry miniprogram_dist/index.json
+83 silly gunzTarPerm modified mode [ 'miniprogram_dist/index.json', 420, 438 ]
+84 silly gunzTarPerm extractEntry miniprogram_dist/index.wxml
+85 silly gunzTarPerm modified mode [ 'miniprogram_dist/index.wxml', 420, 438 ]
+86 silly gunzTarPerm extractEntry miniprogram_dist/index.wxss
+87 silly gunzTarPerm modified mode [ 'miniprogram_dist/index.wxss', 420, 438 ]
+88 silly gunzTarPerm extractEntry src/index.js
+89 silly gunzTarPerm modified mode [ 'src/index.js', 420, 438 ]
+90 silly gunzTarPerm extractEntry src/index.json
+91 silly gunzTarPerm modified mode [ 'src/index.json', 420, 438 ]
+92 silly gunzTarPerm extractEntry src/index.wxml
+93 silly gunzTarPerm modified mode [ 'src/index.wxml', 420, 438 ]
+94 silly gunzTarPerm extractEntry src/index.wxss
+95 silly gunzTarPerm modified mode [ 'src/index.wxss', 420, 438 ]
+96 verbose write writing to D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker\package.json
+97 info preinstall miniprogram-datepicker@0.3.0
+98 verbose readDependencies loading dependencies from D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker\package.json
+99 silly prepareForInstallMany adding calendar@github:pithyone/calendar.js from miniprogram-datepicker dependencies
+100 verbose readDependencies loading dependencies from D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker\package.json
+101 silly cache add args [ 'calendar@github:pithyone/calendar.js', null ]
+102 verbose cache add spec calendar@github:pithyone/calendar.js
+103 silly cache add parsed spec Result {
+103 silly cache add   raw: 'calendar@github:pithyone/calendar.js',
+103 silly cache add   scope: null,
+103 silly cache add   name: 'calendar',
+103 silly cache add   rawSpec: 'github:pithyone/calendar.js',
+103 silly cache add   spec: 'github:pithyone/calendar.js',
+103 silly cache add   type: 'hosted',
+103 silly cache add   hosted:
+103 silly cache add    { type: 'github',
+103 silly cache add      ssh: 'git@github.com:pithyone/calendar.js.git',
+103 silly cache add      sshUrl: 'git+ssh://git@github.com/pithyone/calendar.js.git',
+103 silly cache add      httpsUrl: 'git+https://github.com/pithyone/calendar.js.git',
+103 silly cache add      gitUrl: 'git://github.com/pithyone/calendar.js.git',
+103 silly cache add      shortcut: 'github:pithyone/calendar.js',
+103 silly cache add      directUrl: 'https://raw.githubusercontent.com/pithyone/calendar.js/master/package.json' } }
+104 verbose addRemoteGit caching github:pithyone/calendar.js
+105 verbose addRemoteGit pithyone/calendar.js is a repository hosted by github
+106 silly tryGitProto attempting to clone git://github.com/pithyone/calendar.js.git
+107 silly tryClone cloning pithyone/calendar.js via git://github.com/pithyone/calendar.js.git
+108 verbose tryClone git-github-com-pithyone-calendar-js-git-be949a36 not in flight; caching
+109 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+110 verbose makeDirectory C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes creation not in flight; initializing
+111 verbose makeCacheDir UID & GID are irrelevant on win32
+112 verbose git clone --template=C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/pithyone/calendar.js.git C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\git-github-com-pithyone-calendar-js-git-be949a36: undefined
+112 verbose git clone --template=C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git://github.com/pithyone/calendar.js.git C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\git-github-com-pithyone-calendar-js-git-be949a36: undefined
+113 silly tryHTTPS attempting to clone git+https://github.com/pithyone/calendar.js.git
+114 silly tryClone cloning pithyone/calendar.js via git+https://github.com/pithyone/calendar.js.git
+115 verbose tryClone https-github-com-pithyone-calendar-js-git-403e641d not in flight; caching
+116 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+117 verbose git clone --template=C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/pithyone/calendar.js.git C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\https-github-com-pithyone-calendar-js-git-403e641d: undefined
+117 verbose git clone --template=C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/pithyone/calendar.js.git C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\https-github-com-pithyone-calendar-js-git-403e641d: undefined
+118 silly trySSH attempting to clone git@github.com:pithyone/calendar.js.git
+119 silly tryClone cloning pithyone/calendar.js via git@github.com:pithyone/calendar.js.git
+120 verbose tryClone git-github-com-pithyone-calendar-js-git-6b90f186 not in flight; caching
+121 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+122 error git clone --template=C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:pithyone/calendar.js.git C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\git-github-com-pithyone-calendar-js-git-6b90f186: undefined
+122 error git clone --template=C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror git@github.com:pithyone/calendar.js.git C:\Users\Administrator\AppData\Roaming\npm-cache\_git-remotes\git-github-com-pithyone-calendar-js-git-6b90f186: undefined
+123 verbose about to build D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+124 verbose unlock done using C:\Users\Administrator\AppData\Roaming\npm-cache\_locks\miniprogram-datepicker-4718d94144c139bf.lock for D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+125 verbose stack Error: not found: git
+125 verbose stack     at F (D:\Studytools\node\node_modules\npm\node_modules\which\which.js:63:19)
+125 verbose stack     at E (D:\Studytools\node\node_modules\npm\node_modules\which\which.js:72:29)
+125 verbose stack     at D:\Studytools\node\node_modules\npm\node_modules\which\which.js:81:16
+125 verbose stack     at D:\Studytools\node\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+125 verbose stack     at D:\Studytools\node\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+125 verbose stack     at FSReqWrap.oncomplete (fs.js:82:15)
+126 verbose cwd D:\Workspace\xiaochengxu\新的小程序\miniprogram
+127 error Windows_NT 10.0.15063
+128 error argv "D:\\Studytools\\node\\node.exe" "D:\\Studytools\\node\\node_modules\\npm\\bin\\npm-cli.js" "install" "miniprogram-datepicker" "--production"
+129 error node v4.4.3
+130 error npm  v2.15.1
+131 error code ENOGIT
+132 error not found: git
+133 error Failed using git.
+133 error This is most likely not a problem with npm itself.
+133 error Please check if you have git installed and in your PATH.
+134 verbose exit [ 1, true ]
+135 verbose unbuild node_modules\miniprogram-datepicker
+136 info preuninstall miniprogram-datepicker@0.3.0
+137 info uninstall miniprogram-datepicker@0.3.0
+138 verbose unbuild rmStuff miniprogram-datepicker@0.3.0 from D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules
+139 info postuninstall miniprogram-datepicker@0.3.0
+140 silly gentlyRm D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker is being purged from base D:\Workspace\xiaochengxu\新的小程序\miniprogram
+141 verbose gentlyRm don't care about contents; nuking D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+142 silly vacuum-fs purging D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules\miniprogram-datepicker
+143 silly vacuum-fs quitting because other entries in D:\Workspace\xiaochengxu\新的小程序\miniprogram\node_modules
