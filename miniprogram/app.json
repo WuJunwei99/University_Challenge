@@ -1,16 +1,17 @@
 {
   "pages": [
     "pages/home/home",
+    "pages/search/search",
     "pages/add/add",
-    "pages/complex/complex"
+    "pages/complex/complex",
+    "pages/event_info/event_info"
   ],
   "window": {
-    "onReachBottomDistance":100,
-     "backgroundColor": "#F6F6F6",
+    "onReachBottomDistance": 100,
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarBackgroundColor": "#1E90FF",
     "navigationBarTitleText": "大学生学科竞赛",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap64.json"
 }

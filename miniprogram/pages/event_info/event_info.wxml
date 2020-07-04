@@ -1,0 +1,30 @@
+<!--pages/course/course.wxml-->
+<import src="../other/template.wxml"/>
+<view class="pageContainer">
+    <template is="search"/>
+    <view class="courses flex">
+    <view class="courses-left">
+        <block wx:for="{{courses}}" wx:for-index="couIdx" wx:for-item="couItem">
+            <view data-index="{{couIdx}}" class="{{couItem.active=='true'?'active':''}}" id="{{couItem.title}}" bindtap="selectTab">
+                <text>{{couItem.title}}</text>
+            </view>
+        </block>
+
+    </view>
+    <block wx:for="{{test}}" wx:for-item = "item" > 
+<view class="post-container" data-post-id="{{postId}}" bindtap="onTapToDetail" id="{{item._id}}">
+    <view class = "post-author-date">
+        <text class = "post-title">{{item.title}}</text>
+    </view>
+  
+    <view class="post-test">
+    <image src = "{{item.avatar}}" />
+      <text class = "item.post-content">
+     {{item.content}}
+      </text>
+    </view>
+  </view>
+
+    </block>
+    </view> 
+</view>

@@ -1,5 +1,4 @@
 /* pages/home/home.wxss */
-
 .post-container{
   flex-direction:column;
   display:flex;
@@ -9,7 +8,9 @@
   border-top:1px solid #ededed;
   padding-bottom:5px;
 }
-
+van-button{
+  color:linear-gradient(to right, #00dbde,#fc00ff)
+}
 .post-author-date{
   margin:10px 20rpx 10px;
   display:flex;
@@ -28,15 +29,14 @@
 }
 
 .post author-date text{
-  margin-left:50px;
+  margin-left:50rpx;
 
 }
 
 .post-title{
- font-size:16px;
+ font-size:40rpx;
  font-weight:600;
  color:#333;
- margin-left:20px;
 
 }
 
@@ -51,37 +51,104 @@
 
 swiper{
   width:100%;
-  height:200px;
+  height:380rpx;
 }
 
 swiper image{
-   width:100%;
-  height:200px;
-}
-
-.search
-{
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
-  align-items: center;
   width:100%;
-  height:80rpx;
-  background-color:whitesmoke;
-  border:1rpx solid whitesmoke;
-  border-radius: 5rpx;
-
+  height:100%;
 }
 
-/* 搜索框提示文字样式 */
-.search input
-{
-  font-size:27rpx;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding-left:30rpx; 
-  width:80%
+
+.container {
+	height: 120rpx;
+  background:#1E90FF;
+}
+.bars{
+  color:white;
+  margin-left:5%;
+  margin-top: -5px
+}
+.cego_icon{
+  display:flex;
+  flex-direction:column;
+  font-size:28rpx;
+  color:#fff
 }
 
-.van-row text{
-  font-size:10px;
+.header {
+	display: -webkit-flex;
+	left: 0;
+	top: 0;
+	width: 100%;
+  height:9%;
+	padding: 20rpx;
+	box-sizing: border-box;
+	z-index: 1;
+	-webkit-transition: background 0.5s ease-in-out;
 }
+.header.scrolled {
+	background: #feb70f;
+}
+.header .icon {
+	width: 40rpx;
+	height: 40rpx;
+	vertical-align: top;
+}
+.header .location {
+	color: #fff;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	min-width: 100rpx;
+	max-width: 340rpx;
+	padding: 10rpx 20rpx 10rpx 10rpx;
+	border-radius: 30rpx;
+	background: rgba(0,0,0,0.3);
+	margin-right: 20rpx;
+	vertical-align: middle;
+}
+.header .search {
+  margin-left:5%;
+	-webkit-flex: 1;
+	color: #888;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	padding: 15rpx;
+	border-radius: 30rpx;
+	background: #fff;
+  height:48rpx;
+	/*border-bottom: 1rpx solid #aaa;*/
+}
+
+
+.icons .icon {
+	float: left;
+	display: -webkit-flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 25%;
+	text-align: center;
+	margin: 10px 0px 10px 0px;
+}
+.icons .icon image {
+  width:100rpx;
+  height: 100rpx;
+  border-radius:50%;
+	margin: 0 auto;
+
+}
+.icons .icon text {
+	color: #000;
+	font-size: 24rpx;
+	line-height: 2;
+}
+.section {
+	background: #fff;
+	border-bottom: 1rpx solid #dedede;
+	margin-bottom: 15rpx;
+	padding: 10rpx;
+  height:430rpx
+}
+
+
+
