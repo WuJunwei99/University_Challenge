@@ -1,0 +1,80 @@
+
+<view class="topBackground">
+
+  <view slot="title" class="userAcatar">
+    <van-image
+    round
+    fit="cover"
+    width="3rem"
+    height="3rem"
+    src='{{userAvatarUrl}}'
+    />
+  </view>
+  <view class="nickName">{{userNickName}}</view>
+</view>
+
+
+<van-button icon="info" round color="#1E90FF" open-type="getUserInfo" bindgetuserinfo='getUserInfo' wx:if="{{!isAuthed}}">点击授权头像信息</van-button>
+<van-cell  icon="contact" is-link>
+  <view slot="title">
+    <view class="van-cell-text">个人信息</view>
+  </view>
+</van-cell>
+<van-cell  icon="like-o" is-link>
+  <view slot="title">
+    <view class="van-cell-text">我的收藏</view>
+  </view>
+</van-cell>
+<van-cell  icon="flag-o" is-link>
+  <view slot="title">
+    <view class="van-cell-text">我的积分</view>
+  </view>
+</van-cell>
+<van-cell  icon="comment-o" is-link bind:click="showSuggestPopup">
+  <view slot="title">
+    <view class="van-cell-text">意见反馈</view>
+  </view>
+</van-cell>
+<van-cell  icon="question" is-link bind:click="showAboutPopup">
+  <view slot="title">
+    <view class="van-cell-text">关于APP</view>
+  </view>
+</van-cell>
+<van-popup show="{{ showAboutUs }}"  bind:close="showAboutClose" custom-style="height:18%;width:95%;"  closeable ="true" safe-area-inset-top="true">
+    <van-icon name="service" class = "aboutUsIcon"/>
+    <view >
+        <text decode="true" selectable='true'>&ensp;&ensp;&ensp;&ensp;旨在打造一个完善的大学生学科竞赛平台系统，如有任何问题请与我们联系！\n&ensp;&ensp;&ensp;&ensp;邮箱：1159958707@qq.com</text>
+    </view>
+</van-popup>
+<van-popup show="{{ showSuggest }}"  bind:close="showSuggestClose" custom-style="height:30%;width:95%;"  closeable ="true" safe-area-inset-top="true">
+    <van-icon name="comment-o" class = "aboutUsIcon"/> <text decode="true"> &ensp;意见反馈\n</text>
+    <view style="height: 60%;" >
+        <van-cell-group>
+        <van-field
+            value="{{ suggestInfo }}"
+            placeholder="请输入您想反馈的内容"
+            border="{{ false }}"
+            input-align="left"
+            size="large"
+            type="textarea"
+            autosize
+            fixed="true"
+            clearable
+            bind:input="inputSuggestInfo"
+        />
+        </van-cell-group>
+    </view>
+    <view style="justify-content:flex-end;display: flex;">
+        <van-button icon="https://img.yzcdn.cn/vant/logo.png" type="info" style="margin-bottom: -20px;margin-right: 10px;" bind:click="submitSuggest">
+            提交
+        </van-button>
+    </view>
+</van-popup>
+<van-toast id="van-toast" />
+
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+<van-tabbar-item icon="home-o">主页</van-tabbar-item>
+<van-tabbar-item icon="newspaper-o">学习资料</van-tabbar-item>
+<van-tabbar-item icon="manager-o">我的</van-tabbar-item>
+</van-tabbar>

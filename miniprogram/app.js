@@ -1,7 +1,42 @@
 //app.js
 App({
   onLaunch: function () {
+    this.globalData = {
+        userinfo:{
+            avatarUrl:'',
+            nickName:'',
+            isAuthed:false
+        },
+        userOriginCode:'',
+        userOpenId:''
+    }
+    wx.login({
+        success:(result)=>{
+            this.globalData.userOriginCode = result.code;
+            wx.request({
+                url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx7704a9323416a1d7&secret=17cc1ce61bec993912a61cb401855907&js_code='+this.globalData.userOriginCode+'&grant_type=authorization_code',
+                success:(res)=>{
+                    this.globalData.userOpenId = res.data.openid
+                    console.log("this.globalData.userOpenId",this.globalData.userOpenId);
+                }
+            })
+            wx.getSetting({
+                success:(res)=>{
+                    if(res.authSetting['scope.userInfo']){
+                        //获取用户信息
+                        wx.getUserInfo({
+                          success:(result)=>{
+                              //赋值全局变量
+                              this.globalData.userinfo = result.userInfo;
+                          },
+                        })
+                    }
+                }
+              })
 
+        }
+      })
+   
     if (!wx.cloud) {
       console.error('请使用 2.2.3 或以上的基础库以使用云能力')
     } else {
@@ -15,7 +50,7 @@ App({
       })
     }
 
-    this.globalData = {}
+    
     const updateManager = wx.getUpdateManager()
 
     updateManager.onCheckForUpdate(function (res) {
@@ -46,5 +81,4 @@ App({
     })
   },
 
-      
 })

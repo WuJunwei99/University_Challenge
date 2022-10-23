@@ -1,5 +1,6 @@
 <view class="pageContainer  bgC">
 <van-cell title="展示弹出层" is-link bind:click="showPopup" />
+
 <van-popup
   show="{{ show }}"
   position="left"
@@ -16,10 +17,6 @@
   <!--search-->
 <view class="container">
 	<view class="header {{scrollDown?'scrolled':''}}">
-      <view class="cego_icon" bindtap="showPopup" >
-			<van-icon name="bars" class="bars" size="55rpx"/>
-			分类
-      </view>
 		<view class="search" bindtap="tapSearch">
 			<image class="icon" src="/imgs/index/icon_search.png"/>
 			<i class="fa fa-home" ></i>
@@ -27,8 +24,6 @@
 		</view>
 	</view>
 </view>
-
-
   <swiper indicator-dots="true" autoplay="true" interval="3000" >
    		<swiper-item wx:for="{{test2}}" wx:for-item="item" bindtap="onTapToDetail" id="{{item._id}}">
     <image src = "{{item.avatar}}" />
@@ -48,54 +43,26 @@
 
  
 
-  <block wx:for="{{test}}" wx:for-item = "item" > 
-<view class="post-container" data-post-id="{{postId}}" bindtap="onTapToDetail" id="{{item._id}}">
-    <view class = "post-author-date">
-        <text class = "post-title">{{item.title}}</text>
+    <block wx:for="{{test}}" wx:for-item = "item" > 
+        <view class="post-container" data-post-id="{{postId}}" bindtap="onTapToDetail" id="{{item._id}}">
+        <view class = "post-author-date">
+            <text class = "post-title">{{item.title}}</text>
+        </view>
+    
+        <view class="post-test">
+            <image src = "{{item.avatar}}" />
+            <text class = "item.post-content">
+                {{item.content}}
+            </text>
+        </view>
     </view>
-  
-    <view class="post-test">
-    <image src = "{{item.avatar}}" />
-      <text class = "item.post-content">
-     {{item.content}}
-      </text>
-    </view>
-  </view>
 
     </block>
 </view>
 <text>\n</text><text>\n</text>
 
 <van-tabbar active="{{ active }}" bind:change="onChange">
-  <van-tabbar-item>
-    <image
-      slot="icon"
-      src="{{ icon0.normal }}"
-      mode="aspectFit"
-      style="width: 30px; height: 18px;"
-    />
-    <image
-      slot="icon-active"
-      src="{{ icon0.active }}"
-      mode="aspectFit"
-      style="width: 30px; height: 18px;"
-    />
-    首页
-  </van-tabbar-item>
-  <van-tabbar-item>
-    <image
-      slot="icon"
-      src="{{ icon1.normal }}"
-      mode="aspectFit"
-      style="width: 30px; height: 18px;"
-    />
-    <image
-      slot="icon-active"
-      src="{{ icon1.active }}"
-      mode="aspectFit"
-      style="width: 30px; height: 18px;"
-    />
-    搜索
-  </van-tabbar-item>
-
+<van-tabbar-item icon="home-o">主页</van-tabbar-item>
+<van-tabbar-item icon="newspaper-o">学习资料</van-tabbar-item>
+<van-tabbar-item icon="manager-o">我的</van-tabbar-item>
 </van-tabbar>

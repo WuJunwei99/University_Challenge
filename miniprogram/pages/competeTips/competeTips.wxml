@@ -1,0 +1,28 @@
+<view class="pageContainer  bgC">
+    <block wx:for="{{competeTips}}" wx:for-item = "item" > 
+        <view class="post-container" data-post-id="{{postId}}" bindtap="showTipsDetail" id="{{item.baiduPanUrl}}">
+        <view class = "post-author-date">
+            <text class = "post-title">{{item.title}}</text>
+        </view>
+    
+        <view class="post-test">
+            <image src = "{{item.avatar}}" />
+            <text class = "item.post-content">
+                {{item.content}}
+            </text>
+        </view>
+    </view>
+    </block>
+</view>
+<van-popup show="{{ showTipsDeatil }}"  bind:close="closeTipsDetail" custom-style="height:16%;width:100%;"  closeable ="true" safe-area-inset-top="true">
+        <van-icon name="info" size="20px" class = "aboutUsIcon"/>
+        <view style="word-break:break-all" >
+            <text decode="true"  selectable='true'> &ensp;&ensp;&ensp;&ensp;{{baiduPanUrl}}</text>
+        </view>
+</van-popup>
+
+<van-tabbar active="{{ active }}" bind:change="onChange">
+<van-tabbar-item icon="home-o">主页</van-tabbar-item>
+<van-tabbar-item icon="newspaper-o">学习资料</van-tabbar-item>
+<van-tabbar-item icon="manager-o">我的</van-tabbar-item>
+</van-tabbar>

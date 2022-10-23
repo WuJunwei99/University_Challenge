@@ -4,7 +4,9 @@
     "pages/search/search",
     "pages/add/add",
     "pages/complex/complex",
-    "pages/event_info/event_info"
+    "pages/event_info/event_info",
+    "pages/myPage/myPage",
+    "pages/competeTips/competeTips"
   ],
   "window": {
     "onReachBottomDistance": 100,

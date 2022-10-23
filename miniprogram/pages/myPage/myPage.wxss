@@ -1,0 +1,22 @@
+
+.topBackground{
+    background:  #1E90FF;
+    height: 300rpx;
+    display:flex;
+}
+.userAcatar{
+    margin-left: 40rpx;
+    margin-top:40rpx;
+    display:flex;
+}
+.nickName{
+    display:flex;
+    color:white;
+    margin-top:180rpx;
+    margin-left: -105rpx;
+}
+.aboutUsIcon{
+    margin-top:40rpx;
+    margin-left:30rpx;
+    margin-bottom:10rpx;
+}

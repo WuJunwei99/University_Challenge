@@ -1,10 +1,21 @@
 // pages/home/home.js
-import Toast from 'vant-weapp/toast/toast';
+import Toast from '@vant/weapp/toast/toast';
 const db = wx.cloud.database()
 const testCollection = db.collection('test')
 const com = db.command
 const _ = db.command
+var app = getApp();
 Page({
+    data: {
+        active: 0,
+        icon: {
+          normal: 'https://img.yzcdn.cn/vant/user-inactive.png',
+          active: 'https://img.yzcdn.cn/vant/user-active.png',
+        },
+      },
+      onChange(event) {
+        this.setData({ active: event.detail });
+      },
   addData: function (event) {
     console.log(event)
     var time = new Date();
@@ -29,7 +40,7 @@ Page({
 
   onLoad: function (options) {
     var navs1;
-    
+    console.log("app",app)
     testCollection.where({
       show: db.RegExp({
         regexp: "yes"
@@ -130,10 +141,15 @@ Page({
     }
     else if (event.detail==1){
       wx.navigateTo({
-        url: '../search/search',
+        url: '../competeTips/competeTips',
       })
     }
-    else if (event.detail == 2) {
+    else if (event.detail==2){
+        wx.navigateTo({
+          url: '../myPage/myPage',
+        })
+      }
+    else if (event.detail == 3) {
       wx.showToast({
         title: '功能正在完善中，尽请期待！',
         icon: 'none',    //如果要纯文本，不要icon，将值设为'none'
@@ -253,7 +269,6 @@ Page({
       })
   },
   searchTest0: function (event) {
-   
     testCollection.where(_.or([
       {
         detail: db.RegExp({
