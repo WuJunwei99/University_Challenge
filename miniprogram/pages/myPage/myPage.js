@@ -119,6 +119,8 @@ Page({
                   })
                 }
               ])).get().then(res => {
+                  if(res.data[0]){
+                    console.log("res.data[0].userNickName",res.data[0]);
                     app.globalData.userinfo.isAuthed = true;
                     app.globalData.userinfo.avatarUrl =res.data[0].userAvatarUrl;
                     app.globalData.userinfo.nickName =res.data[0].userNickName;
@@ -130,6 +132,8 @@ Page({
                             isAuthed:true,
                         })
                       }
+                  }
+                  
                 })
           }
       },
