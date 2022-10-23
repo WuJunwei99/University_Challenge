@@ -33,10 +33,10 @@ Page({
     var time = new Date();
     competeTipsCollection.add({
       data: {
-        title: "java后端学习资料",
-        avatar: "https://s1.ax1x.com/2022/10/23/xgjlE8.png",
-        content: "包含视频教学、示例代码，快来点击获取吧!",
-        baiduPanUrl:"百度网盘链接:https://pan.baidu.com/s/1y9fUUHAw4RNfM3spbP27LA?pwd=2xbf \n提取码:2xbf",
+        title: "Kaggle竞赛案例讲解",
+        avatar: "https://s1.ax1x.com/2022/10/23/x2FyTA.jpg",
+        content: "Kaggle竞赛案例讲解，快来点击获取吧!",
+        baiduPanUrl:"百度网盘链接:https://pan.baidu.com/s/1X1nW5btXx_AhMB5rFT-v7Q?pwd=92p2提取码:92p2",
         add_time: time,
         detail_time: time,
       },

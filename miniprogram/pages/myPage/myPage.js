@@ -105,6 +105,7 @@ Page({
             suggestInfo: '',
         })
           if(app.globalData.userinfo.isAuthed){
+            console.log("app.globalData.userinfo.nickName",app.globalData.userinfo.nickName)
             this.setData({
                 userAvatarUrl:app.globalData.userinfo.avatarUrl,
                 userNickName:app.globalData.userinfo.nickName,
@@ -119,8 +120,9 @@ Page({
                 }
               ])).get().then(res => {
                     app.globalData.userinfo.isAuthed = true;
-                    app.globalData.userinfo.userAvatarUrl =res.data[0].userAvatarUrl;
-                    app.globalData.userinfo.userNickName =res.data[0].userNickName;
+                    app.globalData.userinfo.avatarUrl =res.data[0].userAvatarUrl;
+                    app.globalData.userinfo.nickName =res.data[0].userNickName;
+                    console.log("res.data[0].userNickName",res.data[0].userNickName)
                     if(app.globalData.userinfo.isAuthed){
                         this.setData({
                             userAvatarUrl:res.data[0].userAvatarUrl,

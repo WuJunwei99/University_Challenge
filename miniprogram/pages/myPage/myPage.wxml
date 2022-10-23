@@ -15,21 +15,7 @@
 
 
 <van-button icon="info" round color="#1E90FF" open-type="getUserInfo" bindgetuserinfo='getUserInfo' wx:if="{{!isAuthed}}">点击授权头像信息</van-button>
-<van-cell  icon="contact" is-link>
-  <view slot="title">
-    <view class="van-cell-text">个人信息</view>
-  </view>
-</van-cell>
-<van-cell  icon="like-o" is-link>
-  <view slot="title">
-    <view class="van-cell-text">我的收藏</view>
-  </view>
-</van-cell>
-<van-cell  icon="flag-o" is-link>
-  <view slot="title">
-    <view class="van-cell-text">我的积分</view>
-  </view>
-</van-cell>
+
 <van-cell  icon="comment-o" is-link bind:click="showSuggestPopup">
   <view slot="title">
     <view class="van-cell-text">意见反馈</view>

@@ -8,7 +8,18 @@
     border-top:1px solid #ededed;
     padding-bottom:5px;
   }
-
+  .post-author-date{
+    margin:10px 20rpx 10px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+  }
+  
+  .post-author-date image{
+    width:80rpx;
+    height:80rpx;
+  }
+  
   .post-test image{
     width:100%;
     height:300rpx;
