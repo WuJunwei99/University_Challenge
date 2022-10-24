@@ -29,11 +29,6 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "db guide",
-                    "pathName": "pages/databaseGuide/databaseGuide",
-                    "query": ""
-                },
-                {
                     "name": "pages/home/home",
                     "pathName": "pages/home/home",
                     "query": "",
