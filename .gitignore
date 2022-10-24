@@ -15,3 +15,6 @@ node_modules/
 
 #npm日志
 npm-debug.log
+
+# idea
+.idea/
