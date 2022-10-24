@@ -146,7 +146,7 @@ Page({
     }
     else if (event.detail==2){
         wx.navigateTo({
-          url: '../myPage/myPage',
+            url: '../mine/mine',
         })
       }
     else if (event.detail == 3) {
