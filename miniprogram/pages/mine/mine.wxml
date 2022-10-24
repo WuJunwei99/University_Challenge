@@ -26,12 +26,14 @@
     <view class="van-cell-text">关于APP</view>
   </view>
 </van-cell>
+
 <van-popup show="{{ showAboutUs }}"  bind:close="showAboutClose" custom-style="height:18%;width:95%;"  closeable ="true" safe-area-inset-top="true">
     <van-icon name="service" class = "aboutUsIcon"/>
     <view >
         <text decode="true" selectable='true'>&ensp;&ensp;&ensp;&ensp;旨在打造一个完善的大学生学科竞赛平台系统，如有任何问题请与我们联系！\n&ensp;&ensp;&ensp;&ensp;邮箱：1159958707@qq.com</text>
     </view>
 </van-popup>
+
 <van-popup show="{{ showSuggest }}"  bind:close="showSuggestClose" custom-style="height:30%;width:95%;"  closeable ="true" safe-area-inset-top="true">
     <van-icon name="comment-o" class = "aboutUsIcon"/> <text decode="true"> &ensp;意见反馈\n</text>
     <view style="height: 60%;" >
@@ -60,7 +62,7 @@
 
 
 <van-tabbar active="{{ active }}" bind:change="onChange">
-<van-tabbar-item icon="home-o">主页</van-tabbar-item>
-<van-tabbar-item icon="newspaper-o">学习资料</van-tabbar-item>
-<van-tabbar-item icon="manager-o">我的</van-tabbar-item>
+    <van-tabbar-item icon="home-o">主页</van-tabbar-item>
+    <van-tabbar-item icon="newspaper-o">学习资料</van-tabbar-item>
+    <van-tabbar-item icon="manager-o">我的</van-tabbar-item>
 </van-tabbar>

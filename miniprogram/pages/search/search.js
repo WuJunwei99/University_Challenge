@@ -131,7 +131,7 @@ Page({
   },
   btn_name: function (res) {
     wx.navigateTo({
-      url: '../complex/complex?id=' + res.currentTarget.dataset.name,
+      url: '../articleDetail/articleDetail?id=' + res.currentTarget.dataset.name,
     })
     console.log(res.currentTarget.dataset.name);
   }, 

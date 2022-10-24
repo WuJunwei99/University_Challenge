@@ -126,7 +126,7 @@ Page({
   },
   onTapToDetail0: function (res) {
     wx.navigateTo({
-      url: '../complex/complex?id=' + res.currentTarget.dataset.name,
+      url: '../articleDetail/articleDetail?id=' + res.currentTarget.dataset.name,
     })
     console.log(res.currentTarget.dataset.name);
   }, 
@@ -324,7 +324,7 @@ Page({
     console.log(event.currentTarget.id);
     var id = event.currentTarget.id
     wx.navigateTo({
-      url: '../complex/complex?id='+id,
+      url: '../articleDetail/articleDetail?id='+id,
     })
   },
 

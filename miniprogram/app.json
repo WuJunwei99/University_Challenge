@@ -3,7 +3,7 @@
     "pages/home/home",
     "pages/search/search",
     "pages/add/add",
-    "pages/complex/complex",
+    "pages/articleDetail/articleDetail",
     "pages/event_info/event_info",
     "pages/mine/mine",
     "pages/competeTips/competeTips"

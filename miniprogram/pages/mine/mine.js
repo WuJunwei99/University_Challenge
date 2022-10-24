@@ -10,7 +10,6 @@ Page({
     data: {
         showAboutUs:false,
         showSuggest:false,
-        loading: true,
         active: 2,
         isAuthed:false,
         suggestInfo:'',
@@ -21,13 +20,15 @@ Page({
         userAvatarUrl:'',
         userNickName:'',
       },
+
+
       inputSuggestInfo : function (event) {
         if((event.detail.suggestInfo)!=''){
             this.setData({
                 suggestInfo: event.detail
             });
             console.log(event);
-        }9
+        }
       },
       submitSuggest : function (event) {
         console.log("submitSuggest",this.data.suggestInfo);
@@ -68,9 +69,7 @@ Page({
       },
 
       onReady() {
-        this.setData({
-          loading: false,
-        });
+
       },
       onChange(event) {
         this.setData({ active: event.detail });
@@ -124,7 +123,6 @@ Page({
                     app.globalData.userinfo.isAuthed = true;
                     app.globalData.userinfo.avatarUrl =res.data[0].userAvatarUrl;
                     app.globalData.userinfo.nickName =res.data[0].userNickName;
-                    console.log("res.data[0].userNickName",res.data[0].userNickName)
                     if(app.globalData.userinfo.isAuthed){
                         this.setData({
                             userAvatarUrl:res.data[0].userAvatarUrl,
@@ -153,19 +151,17 @@ Page({
                     userOriginCode:app.globalData.userOriginCode,
                 },
                 success: res => {
-                console.log(res)
+                    this.setData({
+                        userAvatarUrl:e.detail.userInfo.avatarUrl,
+                        userNickName:e.detail.userInfo.nickName,
+                        isAuthed:true,
+                    }),
+                    app.globalData.userinfo.avatarUrl=e.detail.userInfo.avatarUrl,
+                    app.globalData.userinfo.nickName=e.detail.userInfo.nickName,
+                    app.globalData.userinfo.isAuthed = true;
                 }
             })
-            this.setData({
-                userAvatarUrl:e.detail.userInfo.avatarUrl,
-                userNickName:e.detail.userInfo.nickName,
-                isAuthed:true,
-            }),
-            app.globalData.userinfo.avatarUrl=e.detail.userInfo.avatarUrl,
-            app.globalData.userinfo.nickName=e.detail.userInfo.nickName,
-            app.globalData.userinfo.isAuthed = true;
           }
-        console.log(e);
       }
 
 })
