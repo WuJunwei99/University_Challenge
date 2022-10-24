@@ -1,26 +1,28 @@
-const cloud = require('wx-server-sdk')
+import { init, DYNAMIC_CURRENT_ENV, getWXContext, openapi } from 'wx-server-sdk'
 
-cloud.init({
-  // API 调用都保持和云函数当前所在环境一致
-  env: cloud.DYNAMIC_CURRENT_ENV
+init({
+    // API 调用都保持和云函数当前所在环境一致
+    env: DYNAMIC_CURRENT_ENV
 })
 
 // 云函数入口函数
-exports.main = async (event, context) => {
+export async function main(event, context) {
 
-  console.log(event)
+    console.log(event)
 
-  const { OPENID } = cloud.getWXContext()
+    const {
+        OPENID
+    } = getWXContext()
 
-  const result = await cloud.openapi.customerServiceMessage.send({
-    touser: OPENID,
-    msgtype: 'text',
-    text: {
-      content: '收到：' + event.Content,
-    }
-  })
+    const result = await openapi.customerServiceMessage.send({
+        touser: OPENID,
+        msgtype: 'text',
+        text: {
+            content: '收到：' + event.Content,
+        }
+    })
 
-  console.log(result)
+    console.log(result)
 
-  return result
+    return result
 }
