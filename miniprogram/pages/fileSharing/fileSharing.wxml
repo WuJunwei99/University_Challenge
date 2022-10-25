@@ -20,9 +20,3 @@
         <text decode="true" selectable='true'> &ensp;&ensp;&ensp;&ensp;{{baiduPanUrl}}</text>
     </view>
 </van-popup>
-
-<van-tabbar active="{{ active }}" bind:change="onChange" placeholder='false'>
-    <van-tabbar-item icon="home-o">主页</van-tabbar-item>
-    <van-tabbar-item icon="newspaper-o">学习资料</van-tabbar-item>
-    <van-tabbar-item icon="manager-o">我的</van-tabbar-item>
-</van-tabbar>

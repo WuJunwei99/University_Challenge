@@ -6,7 +6,7 @@
         "pages/articleDetail/articleDetail",
         "pages/event_info/event_info",
         "pages/mine/mine",
-        "pages/competeTips/competeTips"
+        "pages/fileSharing/fileSharing"
     ],
     "window": {
         "onReachBottomDistance": 100,
@@ -15,5 +15,29 @@
         "navigationBarTitleText": "大学生学科竞赛",
         "navigationBarTextStyle": "white"
     },
-    "sitemapLocation": "sitemap64.json"
+    "sitemapLocation": "sitemap64.json",
+    "tabBar": {
+        "color": "#000",
+        "selectedColor": "#0088ff",
+        "list": [
+            {
+                "selectedIconPath": "image/house.fill@2x.png",
+                "iconPath": "image/house@2x.png",
+                "pagePath": "pages/home/home",
+                "text": "首页"
+            },
+            {
+                "selectedIconPath": "image/books.vertical.fill@2x.png",
+                "iconPath": "image/books.vertical@2x.png",
+                "pagePath": "pages/fileSharing/fileSharing",
+                "text": "学习资料"
+            },
+            {
+                "selectedIconPath": "image/person.crop.circle.fill@2x.png",
+                "iconPath": "image/person.crop.circle@2x.png",
+                "pagePath": "pages/mine/mine",
+                "text": "我"
+            }
+        ]
+    }
 }
