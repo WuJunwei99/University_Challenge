@@ -12,7 +12,7 @@
     <view class="container">
         <view class="header {{scrollDown?'scrolled':''}}">
             <view class="search" bindtap="tapSearch">
-                <image class="icon" src="/imgs/index/icon_search.png" />
+                <image class="icon" src="/image/magnifyingglass@2x.png" />
                 <i class="fa fa-home"></i>
                 数学建模
             </view>
