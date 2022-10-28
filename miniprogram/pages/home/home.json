@@ -16,5 +16,6 @@
         "van-tabbar-item": "@vant/weapp/tabbar-item/index",
         "van-image": "@vant/weapp/image/index",
         "van-toast": "@vant/weapp/toast/index"
-    }
+    },
+    "disableScroll":true
 }

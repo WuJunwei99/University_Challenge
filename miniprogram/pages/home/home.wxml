@@ -1,32 +1,21 @@
-<view class="pageContainer  bgC">
-    <van-cell title="展示弹出层" is-link bind:click="showPopup" />
-
-    <van-popup show="{{ show }}" position="left" custom-style="width:200rpx;height:100%" bind:close="onClose" duration:0>
-        <van-sidebar active="{{ active_test }}">
-            <block wx:for="{{bar}}" wx:for-item="item">
-                <van-sidebar-item size="10px" title="{{item.title}}" bindtap="showCategory" id="{{item.title}}" />
-            </block>
-        </van-sidebar>
-    </van-popup>
-    <!--search-->
-    <view class="container">
-        <view class="header {{scrollDown?'scrolled':''}}">
-            <view class="search" bindtap="tapSearch">
-                <image class="icon" src="/image/magnifyingglass@2x.png" />
-                <i class="fa fa-home"></i>
-                数学建模
-            </view>
+<view class="search-container">
+    <view class="header {{scrollDown?'scrolled':''}}">
+        <view class="search" bindtap="tapSearch">
+            <image class="icon" src="/image/magnifyingglass@2x.png" />
+            <text>数学建模</text>
         </view>
     </view>
-    <swiper indicator-dots="true" autoplay="true" interval="3000">
-        <swiper-item wx:for="{{test2}}" wx:for-item="item" bindtap="onTapToDetail" id="{{item._id}}">
-            <image src="{{item.avatar}}" />
-        </swiper-item>
+</view>
+<scroll-view class="scroll-view" scroll-y="true" enable-back-to-top="true">
+    <view class="top-container">
+        <swiper class="banner-container" indicator-dots="true" autoplay="true" interval="3000" circular="false">
+            <swiper-item class="banner-item" wx:for="{{test2}}" wx:for-item="item" bindtap="onTapToDetail" id="{{item._id}}">
+                <image mode="aspectFill" src="{{item.avatar}}" />
+            </swiper-item>
+        </swiper>
+    </view>
 
-    </swiper>
-
-
-    <swiper class="section icons" indicator-dots="true" autoplay="" interval="" duration="500">
+    <swiper class="section-container icons" indicator-dots="true">
         <swiper-item wx:for="{{navs}}" wx:for-item="list">
             <view class="icon" wx:for="{{list}}" wx:for-item="item" bindtap="showCategory" id="{{item.title}}">
                 <image src="{{item.imgurl}}"></image>
@@ -35,22 +24,12 @@
         </swiper-item>
     </swiper>
 
-
-
     <block wx:for="{{test}}" wx:for-item="item">
         <view class="post-container" data-post-id="{{postId}}" bindtap="onTapToDetail" id="{{item._id}}">
-            <view class="post-author-date">
-                <text class="post-title">{{item.title}}</text>
-            </view>
-
-            <view class="post-test">
-                <image src="{{item.avatar}}" />
-                <text class="item.post-content">
-                    {{item.content}}
-                </text>
-            </view>
+            <text class="post-title">{{item.title}}</text>
+            <text class="post-subtitle">{{item.content}}</text>
+            <image class="post-image" mode="widthFix" src="{{item.avatar}}" />
         </view>
-
     </block>
-</view>
-<text>\n</text><text>\n</text>
+
+</scroll-view>
