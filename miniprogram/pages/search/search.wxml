@@ -1,6 +1,6 @@
 <view class="header">
     <view class='search'>
-        <image class="icon" src="/imgs/index/icon_search.png" />
+        <image class="icon" src="/image/magnifyingglass@3x.png" />
         <input type='text' placeholder='数学建模' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='searchTest'></input>
     </view>
     <van-button icon="search" size="small" round type="info" disabled='{{disabled}}' bind:click="searchTest0">搜索</van-button>
