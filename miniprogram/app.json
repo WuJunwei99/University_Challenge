@@ -27,6 +27,12 @@
                 "text": "首页"
             },
             {
+                "selectedIconPath": "image/magnifyingglass.blue@3x.png",
+                "iconPath": "image/magnifyingglass@3x.png",
+                "pagePath": "pages/search/search",
+                "text": "搜索"
+            },
+            {
                 "selectedIconPath": "image/person.crop.circle.fill@2x.png",
                 "iconPath": "image/person.crop.circle@2x.png",
                 "pagePath": "pages/mine/mine",

@@ -1,7 +1,7 @@
 <view class="search-container">
     <view class="header {{scrollDown?'scrolled':''}}">
         <view class="search" bindtap="tapSearch">
-            <image class="icon" src="/image/magnifyingglass@2x.png" />
+            <image class="icon" src="/image/magnifyingglass@3x.png" />
             <text>数学建模</text>
         </view>
     </view>
