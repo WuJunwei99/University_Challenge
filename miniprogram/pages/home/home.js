@@ -174,7 +174,7 @@ Page({
         }
     },
     tapSearch: function () {
-        wx.navigateTo({
+        wx.switchTab({
             url: '../search/search',
         })
     },
