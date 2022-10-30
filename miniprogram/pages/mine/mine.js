@@ -9,8 +9,8 @@ const com = db.command
 const _ = db.command
 Page({
     data: {
-        showAboutUs: false,
-        showSuggest: false,
+        showAbout: false,
+        showFeedback: false,
         active: 2,
         isAuthed: false,
         suggestInfo: '',
@@ -19,9 +19,31 @@ Page({
             active: 'https://img.yzcdn.cn/vant/user-active.png',
         },
         userAvatarUrl: '',
-        userNickName: '',
+        userNickName: 'Hello，同学！',
+        aboutDialogButtons: [{
+            text: '确定'
+        }],
+        feedbackDialogButtons: [{
+            text: '取消'
+        }, {
+            text: '提交'
+        }],
     },
 
+    tapAbout(e) {
+        this.setData({
+            showAbout: false,
+        })
+    },
+
+    tapFeedback(e) {
+        const _btn = e.detail.item.text;
+        if (_btn == '提交') {
+            this.submitSuggest();
+            return;
+        }
+        this.showFeedbackClose();
+    },
 
     inputSuggestInfo: function (event) {
         if ((event.detail.suggestInfo) !== '') {
@@ -31,6 +53,7 @@ Page({
             console.log(event);
         }
     },
+
     submitSuggest: function (event) {
         console.log("submitSuggest", this.data.suggestInfo);
         if (this.data.suggestInfo !== "") {
@@ -48,29 +71,30 @@ Page({
         } else {
             Toast.fail('所填为空！');
         }
-        this.showSuggestClose()
+        this.showFeedbackClose()
     },
+
     showAboutPopup() {
         this.setData({
-            showAboutUs: true
+            showAbout: true
         });
     },
 
     showAboutClose() {
         this.setData({
-            showAboutUs: false
+            showAbout: false
         });
     },
 
-    showSuggestPopup() {
+    showFeedbackPopup() {
         this.setData({
-            showSuggest: true
+            showFeedback: true
         });
     },
 
-    showSuggestClose() {
+    showFeedbackClose() {
         this.setData({
-            showSuggest: false,
+            showFeedback: false,
             suggestInfo: ""
         });
     },

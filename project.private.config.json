@@ -5,5 +5,36 @@
         "compileHotReLoad": true,
         "urlCheck": false,
         "autoAudits": false
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "pages/home/home",
+                    "pathName": "pages/home/home",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/mine/mine",
+                    "pathName": "pages/mine/mine",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "pages/search/search",
+                    "pathName": "pages/search/search",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "pages/add/add",
+                    "pathName": "pages/add/add",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
     }
 }

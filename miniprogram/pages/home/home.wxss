@@ -7,7 +7,7 @@
 .scroll-view {
     display: flex;
     height: 100vh;
-    background-color: #f9f9f9;
+    background-color: #F5F5F5;
 }
 
 .header {
@@ -40,7 +40,7 @@
 }
 
 .top-container {
-    background: linear-gradient(#1E90FF, #f9f9f9);
+    background: linear-gradient(#1E90FF, #F5F5F5);
 }
 
 .banner-container {
@@ -54,7 +54,7 @@
 }
 
 .section-container {
-    background: #f9f9f9;
+    background: #F5F5F5;
     margin-bottom: 15rpx;
     padding: 10rpx;
     height: 400rpx

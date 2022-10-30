@@ -31,5 +31,4 @@
             <image class="post-image" mode="widthFix" src="{{item.avatar}}" />
         </view>
     </block>
-
 </scroll-view>
