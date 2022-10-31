@@ -2,6 +2,7 @@
 
 .search-container {
     background-color: #1E90FF;
+    display: flex;
 }
 
 .scroll-view {
@@ -11,32 +12,26 @@
 }
 
 .header {
-    /* 此元素即为伸缩盒模型中的伸缩容器，其包含的子元素是伸缩项目 */
-    display: -webkit-flex;
     padding: 20rpx;
     /* 代表padding和border被包含在定义的width和height之内。 */
     box-sizing: border-box;
-}
-
-.header.scrolled {
-    background: #feb70f;
+    flex: 1;
 }
 
 .header .icon {
-    align-items: flex-end;
-    width: 38rpx;
-    height: 38rpx;
+    width: 36rpx;
+    height: 36rpx;
+    padding: 8rpx;
 }
 
-.header .search {
-    flex: 1;
+.search {
+    display: flex;
     color: #888;
-    text-align: center;
-    align-content: center;
-    vertical-align: middle;
     border-radius: 16rpx;
     padding: 16rpx;
     background: #fff;
+    align-items: center;
+    justify-content: center;
 }
 
 .top-container {
