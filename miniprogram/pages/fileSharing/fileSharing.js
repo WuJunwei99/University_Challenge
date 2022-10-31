@@ -1,7 +1,7 @@
 var app = getApp();
 
 const db = wx.cloud.database()
-const competeTipsCollection = db.collection('competeTips')
+const competeTipsCollection = db.collection('fileShare')
 const com = db.command
 const _ = db.command
 Page({
@@ -9,7 +9,10 @@ Page({
         showTipsDeatil: false,
         competeTips: '',
         active: 1,
-        baiduPanUrl: ''
+        baiduPanUrl: '',
+        fileShareButtons: [{
+            text: '关闭'
+        }]
     },
 
     showTipsDetail(event) {
@@ -20,6 +23,13 @@ Page({
         });
     },
 
+    tapFileDetail(e) {
+        const _btn = e.detail.item.text;
+        this.setData({
+            showTipsDeatil: false
+        })
+    },
+
     closeTipsDetail() {
         this.setData({
             showTipsDeatil: false
@@ -28,43 +38,23 @@ Page({
     },
 
     onReady() {
+        console.log("onready")
         this.setData({
             loading: false,
         });
     },
     onChange(event) {
+        console.log("onchange1")
         this.setData({
             active: event.detail
         });
     },
-    onChange(event) {
-        // event.detail 的值为当前选中项的索引
-        if (event.detail == 0) {
-            wx.navigateTo({
-                url: '../home/home',
-            })
-        } else if (event.detail == 1) {
-            wx.navigateTo({
-                url: '../competeTips/competeTips',
-            })
-        } else if (event.detail == 2) {
-            wx.navigateTo({
-                url: '../mine/mine',
-            })
-        } else if (event.detail == 3) {
-            wx.showToast({
-                title: '功能正在完善中，尽请期待！',
-                icon: 'none', //如果要纯文本，不要icon，将值设为'none'
-                duration: 2000
-            })
-        }
-    },
-    onLoad: function (options) {
-        competeTipsCollection.get().then(res => {
+    onLoad(options) {
+        console.log("onload");
+        db.collection('fileShare').get().then(res => {
+            console.log("res:" + res.data)
             this.setData({
-                competeTips: res.data
-            })
-            this.setData({
+                competeTips: res.data,
                 show: false
             });
         })

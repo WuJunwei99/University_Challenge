@@ -27,6 +27,12 @@
                 "text": "首页"
             },
             {
+                "selectedIconPath": "image/books.vertical.fill@2x.png",
+                "iconPath": "image/books.vertical@2x.png",
+                "pagePath": "pages/fileSharing/fileSharing",
+                "text": "学习资料"
+            },
+            {
                 "selectedIconPath": "image/magnifyingglass.blue@3x.png",
                 "iconPath": "image/magnifyingglass@3x.png",
                 "pagePath": "pages/search/search",
