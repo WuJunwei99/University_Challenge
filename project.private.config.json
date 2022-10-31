@@ -33,6 +33,13 @@
                     "pathName": "pages/add/add",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/fileSharing/fileSharing",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }

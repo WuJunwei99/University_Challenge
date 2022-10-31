@@ -30,10 +30,23 @@ page {
     border-radius: 50rpx;
 }
 
+.hint-text-containter {
+    display: flex;
+    flex-direction: column;
+}
+
 .nickName {
     color: white;
     font-size: larger;
     font-weight: bold;
+}
+
+.auth-hint {
+    background-color: rgba(0,0,0,0);
+    color: white;
+    opacity: 0.8;
+    font-size: small;
+    margin-bottom: 16rpx;
 }
 
 .container {

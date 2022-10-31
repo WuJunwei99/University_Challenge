@@ -1,15 +1,15 @@
 <view class="base-container">
     <view class="topBackground">
         <view slot="title" class="userAvatar">
-            <image src='{{userAvatarUrl}}' />
+            <image wx:if="{{isAuthed}}" src='{{userAvatarUrl}}'/>
         </view>
+        <view class="hint-text-containter">
         <view class="nickName">{{userNickName}}</view>
+        <button class="auth-hint" open-type="getUserInfo" bindgetuserinfo='getUserInfo' wx:if="{{!isAuthed}}">点击授权头像信息</button>
+        </view>
     </view>
 
     <view class="container">
-        <van-button icon="info" round color="#1E90FF" open-type="getUserInfo" bindgetuserinfo='getUserInfo' wx:if="{{!isAuthed}}">点击授权头像信息</van-button>
-
-
         <view class="cell-group-container">
             <view class="cell-container" bindtap="showFeedbackPopup">
                 <image class="cell-left-image" src="/image/text.bubble@3x.png" />
