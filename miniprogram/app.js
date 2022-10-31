@@ -1,6 +1,14 @@
 //app.js
+wx. cloud. init()
+const db = wx.cloud.database()
+const appInfoDb = db.collection('appInfo')
 App({
     onLaunch: function () {
+        appInfoDb.get().then(res => {
+            this.appid = res.data[0].appid
+            this.secret = res.data[0].secret
+        })
+        
         this.globalData = {
             userinfo: {
                 avatarUrl: '',
@@ -14,7 +22,7 @@ App({
             success: (result) => {
                 this.globalData.userOriginCode = result.code;
                 wx.request({
-                    url: 'https://api.weixin.qq.com/sns/jscode2session?appid=wx7704a9323416a1d7&secret=17cc1ce61bec993912a61cb401855907&js_code=' + this.globalData.userOriginCode + '&grant_type=authorization_code',
+                    url: 'https://api.weixin.qq.com/sns/jscode2session?appid='+this.appid+'&secret='+this.secret+'&js_code=' + this.globalData.userOriginCode + '&grant_type=authorization_code',
                     success: (res) => {
                         this.globalData.userOpenId = res.data.openid
                         console.log("this.globalData.userOpenId", this.globalData.userOpenId);
