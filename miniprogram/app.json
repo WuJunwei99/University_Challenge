@@ -6,7 +6,8 @@
         "pages/articleDetail/articleDetail",
         "pages/event_info/event_info",
         "pages/mine/mine",
-        "pages/fileSharing/fileSharing"
+        "pages/fileSharing/fileSharing",
+        "pages/fileSharingMore/fileSharingMore"
     ],
     "window": {
         "onReachBottomDistance": 100,

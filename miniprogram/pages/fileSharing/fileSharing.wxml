@@ -1,16 +1,65 @@
 <view class="page-container">
+    <view class="section">
+        <text class="title">优选资源</text>
+        <view bindtap="onMorePress" data-type="recommend">
+            <text class="section-nav-btn">查看更多></text>
+        </view>
+    </view>
     <block wx:for="{{competeTips}}" wx:for-item="item">
         <view class="post-container" data-post-id="{{postId}}" bindtap="showTipsDetail" id="{{item.baiduPanUrl}}">
             <image class="post-image" mode="aspectFill" src="{{item.avatar}}" />
             <view class="post-test">
                 <text class="post-title">{{item.title}}</text>
-                <text class="item.post-content">
-                    {{item.content}}
-                </text>
-                <view class="divider" />
+                <view class="post-tag-container">
+                    <block wx:if="{{item.tag}}" wx:for="{{item.tag}}" wx:for-item="tag">
+                        <text class="post-tag">#{{tag}}</text>
+                    </block>
+                </view>
+                <text class="item.post-content">{{item.content}}</text>
             </view>
         </view>
     </block>
+    <view class="divider" />
+
+    <view class="section">
+        <text class="title">热门标签</text>
+        <!-- <view bindtap="onMorePress" data-type="hotTag">
+            <text class="section-nav-btn">查看更多></text>
+        </view> -->
+    </view>
+    <view class="tag-container">
+        <block wx:for="{{hotTags}}" wx:for-item="tag">
+            <view bindtap="onMorePress" data-type="hotTag" data-tag="{{tag}}">
+                <text class="tag">#{{tag}}</text>
+            </view>
+        </block>
+    </view>
+
+    <view class="divider" />
+
+    <view class="section">  
+        <text class="title">下载排行</text>
+        <view bindtap="onMorePress" data-type="rank">
+            <text class="section-nav-btn">查看更多></text>
+        </view>
+    </view>
+
+    <block wx:for="{{downloadRank}}" wx:for-item="item" wx:for-index="i">
+        <view class="post-container" data-post-id="{{postId}}" bindtap="showTipsDetail" id="{{item.baiduPanUrl}}">
+            <image class="post-image" mode="aspectFill" src="{{item.avatar}}" />
+            <text class="rank-num">{{i + 1}}</text>
+            <view class="post-test2">
+                <text class="post-title">{{item.title}}</text>
+                <view class="post-tag-container">
+                    <block wx:if="{{item.tag}}" wx:for="{{item.tag}}" wx:for-item="tag">
+                        <text class="post-tag">#{{tag}}</text>
+                    </block>
+                </view>
+                <text class="item.post-content">{{item.content}}</text>
+            </view>
+        </view>
+    </block>
+
 </view>
 
 <mp-dialog show="{{showTipsDeatil}}" title="资料详情" buttons="{{fileShareButtons}}" bindbuttontap="tapFileDetail">

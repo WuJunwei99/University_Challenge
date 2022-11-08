@@ -40,6 +40,13 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/fileSharingMore/fileSharingMore",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
