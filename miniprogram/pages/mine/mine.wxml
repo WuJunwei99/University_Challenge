@@ -5,7 +5,7 @@
         </view>
         <view class="hint-text-containter">
         <view class="nickName">{{userNickName}}</view>
-        <button class="auth-hint" open-type="getUserInfo" bindgetuserinfo='getUserInfo' wx:if="{{!isAuthed}}">点击授权头像信息</button>
+        <button class="auth-hint"  bindtap='onTapToProfile' wx:if="{{!isAuthed}}">点击授权头像信息</button> 
         </view>
     </view>
 

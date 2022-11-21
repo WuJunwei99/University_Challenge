@@ -29,13 +29,16 @@ Page({
             text: '提交'
         }],
     },
-
     tapAbout(e) {
         this.setData({
             showAbout: false,
         })
     },
-
+    onTapToProfile: function () {
+        wx.navigateTo({
+            url: '../profile/profile',
+        })
+    },
     tapFeedback(e) {
         const _btn = e.detail.item.text;
         if (_btn == '提交') {
@@ -127,7 +130,7 @@ Page({
             })
         }
     },
-    onLoad: function (options) {
+    onShow: function (options) {
         this.setData({
             suggestInfo: '',
         })
@@ -161,10 +164,11 @@ Page({
             })
         }
     },
+
     /*
     获取用户的头像和昵称信息
     */
-    getUserInfo: function (e) {
+   getUserProfile: function (e) {
         if (e.detail.userInfo) {
             var time = new Date();
             userInfoCollection.add({
