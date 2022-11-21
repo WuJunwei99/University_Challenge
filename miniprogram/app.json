@@ -6,7 +6,6 @@
         "pages/articleDetail/articleDetail",
         "pages/event_info/event_info",
         "pages/mine/mine",
-        "pages/profile/profile",
         "pages/fileSharing/fileSharing",
         "pages/fileSharingMore/fileSharingMore"
     ],
