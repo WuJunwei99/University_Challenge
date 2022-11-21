@@ -106,7 +106,6 @@
 .tag-container {
     margin-bottom: 32rpx;
     margin-top: 24rpx;
-    display: flex;
 }
 
 .tag {

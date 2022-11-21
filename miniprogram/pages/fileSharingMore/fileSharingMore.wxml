@@ -1,0 +1,19 @@
+<view class="page-container">
+    <view class="section">
+        <text class="title">{{title}}</text>
+    </view>
+    <block wx:for="{{tips}}" wx:for-item="item">
+        <view class="post-container" data-post-id="{{postId}}" bindtap="showTipsDetail" id="{{item.baiduPanUrl}}">
+            <image class="post-image" mode="aspectFill" src="{{item.avatar}}" />
+            <view class="post-test">
+                <text class="post-title">{{item.title}}</text>
+                <view class="post-tag-container">
+                    <block wx:if="{{item.tag}}" wx:for="{{item.tag}}" wx:for-item="tag">
+                        <text class="post-tag">#{{tag}}</text>
+                    </block>
+                </view>
+                <text class="item.post-content">{{item.content}}</text>
+            </view>
+        </view>
+    </block>
+</view>

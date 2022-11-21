@@ -20,5 +20,7 @@
         "van-cell": "@vant/weapp/cell/index",
         "van-cell-group": "@vant/weapp/cell-group/index",
         "mp-dialog": "weui-miniprogram/dialog/dialog"
-    }
+    },
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
 }
