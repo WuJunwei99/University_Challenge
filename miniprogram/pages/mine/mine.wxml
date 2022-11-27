@@ -1,42 +1,63 @@
 <view class="base-container">
-    <view class="topBackground">
-        <view slot="title" class="userAvatar">
-            <image wx:if="{{isAuthed}}" src='{{userAvatarUrl}}'/>
-        </view>
-        <view class="hint-text-containter">
-        <view class="nickName">{{userNickName}}</view>
-        <button class="auth-hint"  bindtap='onTapToProfile' wx:if="{{!isAuthed}}">点击授权头像信息</button> 
-        </view>
+  <view class="topBackground">
+    <view slot="title" class="userAvatar">
+      <image wx:if="{{isAuthed}}" src='{{userAvatarUrl}}' />
+    </view>
+    <view class="hint-text-containter">
+      <view class="nickName">{{userNickName}}</view>
+      <button class="auth-hint" bindtap='onTapToProfile' wx:if="{{!isAuthed}}">点击授权头像信息</button>
+    </view>
+  </view>
+
+  <view class="container">
+    <view class="cell-group-container">
+      <view class="cell-container" bindtap="showFeedbackPopup">
+        <image class="cell-left-image" src="/image/text.bubble@3x.png" />
+        <text class="cell-left-text">意见反馈</text>
+        <image class="cell-right-image" src="/image/chevron.right@3x.png" />
+      </view>
+
+      <view class="cell-divider" />
+
+      <view class="cell-container" bindtap="showAboutPopup">
+        <image class="cell-left-image" src="/image/info.circle@3x.png" />
+        <text class="cell-left-text">关于</text>
+        <image class="cell-right-image" src="/image/chevron.right@3x.png" />
+      </view>
     </view>
 
-    <view class="container">
-        <view class="cell-group-container">
-            <view class="cell-container" bindtap="showFeedbackPopup">
-                <image class="cell-left-image" src="/image/text.bubble@3x.png" />
-                <text class="cell-left-text">意见反馈</text>
-                <image class="cell-right-image" src="/image/chevron.right@3x.png" />
-            </view>
+    <mp-dialog show="{{showFeedback}}" title="意见反馈" buttons="{{feedbackDialogButtons}}" bindbuttontap="tapFeedback">
+      <view style="height: 60%;">
+        <van-cell-group>
+          <van-field value="{{ suggestInfo }}" placeholder="请输入您想反馈的内容" border="{{ false }}" input-align="left" size="large" type="textarea" autosize fixed="true" clearable bind:input="inputSuggestInfo" />
+        </van-cell-group>
+      </view>
+    </mp-dialog>
 
-            <view class="cell-divider" />
-
-            <view class="cell-container" bindtap="showAboutPopup">
-                <image class="cell-left-image" src="/image/info.circle@3x.png" />
-                <text class="cell-left-text">关于</text>
-                <image class="cell-right-image" src="/image/chevron.right@3x.png" />
-            </view>
-        </view>
-
-        <mp-dialog show="{{showFeedback}}" title="意见反馈" buttons="{{feedbackDialogButtons}}" bindbuttontap="tapFeedback">
-            <view style="height: 60%;">
-                <van-cell-group>
-                    <van-field value="{{ suggestInfo }}" placeholder="请输入您想反馈的内容" border="{{ false }}" input-align="left" size="large" type="textarea" autosize fixed="true" clearable bind:input="inputSuggestInfo" />
-                </van-cell-group>
-            </view>
-        </mp-dialog>
-
-        <mp-dialog show="{{showAbout}}" title="关于" buttons="{{aboutDialogButtons}}" bindbuttontap="tapAbout">
-            <text decode="true" selectable='true'>旨在打造一个完善的大学生学科竞赛平台系统，如有任何问题请与我们联系！\n邮箱：1159958707@qq.com</text>
-        </mp-dialog>
-        <van-toast id="van-toast" />
-    </view>
+    <mp-dialog show="{{showAbout}}" title="关于" buttons="{{aboutDialogButtons}}" bindbuttontap="tapAbout">
+      <text decode="true" selectable='true'>旨在打造一个完善的大学生学科竞赛平台系统，如有任何问题请与我们联系！\n邮箱：1159958707@qq.com</text>
+    </mp-dialog>
+    <van-toast id="van-toast" />
+  </view>
 </view>
+
+
+<halfScreenDialog bindbuttontap="buttontap" show="{{typeS}}" maskClosable="{{false}}" title="设置个人信息" buttons="{{buttons}}">
+  <view slot='desc' class='profileDialogContainer'>
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image class="avatar" src="{{avatarUrl}}"></image>
+    </button>
+    <text class="avatorHintText">点击修改头像</text>
+    <mp-form>
+      <mp-cells>
+        <mp-cell title="昵称">
+          <input type="nickname" class="weui-input" bindinput='inputNickname' placeholder="请输入昵称" />
+        </mp-cell>
+        <mp-cell title="专业">
+          <input class="weui-input" bindinput='inputMajor' placeholder="请输入专业" />
+        </mp-cell>
+      </mp-cells>
+    </mp-form>
+    <button type="primary" class='saveBtn' bindtap="submitProfile">保存</button>
+  </view>
+</halfScreenDialog>
