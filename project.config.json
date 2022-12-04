@@ -14,9 +14,11 @@
         "checkSiteMap": true,
         "uploadWithSourceMap": true,
         "babelSetting": {
-            "ignore": [],
             "disablePlugins": [],
-            "outputPath": ""
+            "outputPath": "",
+            "ignore": [
+                "miniprogram_npm/psl/*"
+            ]
         },
         "ignoreUploadUnusedFiles": true
     },

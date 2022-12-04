@@ -6,7 +6,7 @@
         </view>
     </view>
     <block wx:for="{{competeTips}}" wx:for-item="item">
-        <view class="post-container" data-post-id="{{postId}}" bindtap="showTipsDetail" id="{{item.baiduPanUrl}}">
+        <view class="post-container" data-post-id="{{postId}}" bindtap="showUseProfilePopup" id="{{item}} ">
             <image class="post-image" mode="aspectFill" src="{{item.avatar}}" />
             <view class="post-test">
                 <text class="post-title">{{item.title}}</text>
@@ -61,6 +61,17 @@
     </block>
 
 </view>
+
+<mp-dialog show="{{showUseProfile}}" title="资料兑换" buttons="{{feedbackDialogButtons}}" bindbuttontap="tapFeedback">
+      <view style="height: 60%;">
+        <van-cell-group>
+            <text align = "left">
+                您当前的积分值：{{nowProfile}}分\n
+                确认使用{{}}积分兑换{{}}？
+            </text>
+        </van-cell-group>
+      </view>
+</mp-dialog>
 
 <mp-dialog show="{{showTipsDeatil}}" title="资料详情" buttons="{{fileShareButtons}}" bindbuttontap="tapFileDetail">
     <text decode="true" selectable='true'>{{baiduPanUrl}}</text>

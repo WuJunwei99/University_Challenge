@@ -3,8 +3,8 @@ import Toast from '@vant/weapp/toast/toast';
 const app = getApp();
 
 const db = wx.cloud.database()
-const userInfoCollection = db.collection('userInfo')
 const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+const userBaseInfoCollection = db.collection('user_base_info')
 const suggestInfoCollection = db.collection('suggestInfo')
 const com = db.command
 const _ = db.command
@@ -52,6 +52,14 @@ Page({
             return;
         }
         this.showFeedbackClose();
+    },
+    onShareAppMessage: function (res) {
+        console.log("转发成功")
+        app.addUserShareInfo(app.globalData)
+        return {
+            title: '',
+            path: '/pages/mine/mine'
+        }
     },
 
     inputSuggestInfo: function (event) {
@@ -140,25 +148,25 @@ Page({
         this.setData({
             suggestInfo: '',
         })
-        if (app.globalData.userinfo.isAuthed) {
-            console.log("app.globalData.userinfo.nickName", app.globalData.userinfo.nickName)
+        if (app.globalData.userBaseInfo.isAuthed) {
+            console.log("app.globalData.userBaseInfo.nickName", app.globalData.userBaseInfo.nickName)
             this.setData({
-                userAvatarUrl: app.globalData.userinfo.avatarUrl,
-                userNickName: app.globalData.userinfo.nickName,
+                userAvatarUrl: app.globalData.userBaseInfo.avatarUrl,
+                userNickName: app.globalData.userBaseInfo.nickName,
                 isAuthed: true,
             })
         } else {
-            userInfoCollection.where(_.or([{
+            userBaseInfoCollection.where(_.or([{
                 userOpenId: db.RegExp({
                     regexp: app.globalData.userOpenId
                 })
             }])).get().then(res => {
                 if (res.data[0]) {
                     console.log("res.data[0].userNickName", res.data[0]);
-                    app.globalData.userinfo.isAuthed = true;
-                    app.globalData.userinfo.avatarUrl = res.data[0].userAvatarUrl;
-                    app.globalData.userinfo.nickName = res.data[0].userNickName;
-                    if (app.globalData.userinfo.isAuthed) {
+                    app.globalData.userBaseInfo.isAuthed = true;
+                    app.globalData.userBaseInfo.avatarUrl = res.data[0].userAvatarUrl;
+                    app.globalData.userBaseInfo.nickName = res.data[0].userNickName;
+                    if (app.globalData.userBaseInfo.isAuthed) {
                         this.setData({
                             userAvatarUrl: res.data[0].userAvatarUrl,
                             userNickName: res.data[0].userNickName,
@@ -175,12 +183,12 @@ Page({
     获取用户的头像和昵称信息
     */
    getUserProfile: function (e) {
-        if (e.detail.userInfo) {
+        if (e.detail.userBaseInfo) {
             var time = new Date();
-            userInfoCollection.add({
+            userBaseInfoCollection.add({
                 data: {
-                    userAvatarUrl: e.detail.userInfo.avatarUrl,
-                    userNickName: e.detail.userInfo.nickName,
+                    userAvatarUrl: e.detail.userBaseInfo.avatarUrl,
+                    userNickName: e.detail.userBaseInfo.nickName,
                     lastLoginTime: time,
                     loginNum: 1,
                     userOpenId: app.globalData.userOpenId,
@@ -188,13 +196,13 @@ Page({
                 },
                 success: res => {
                     this.setData({
-                            userAvatarUrl: e.detail.userInfo.avatarUrl,
-                            userNickName: e.detail.userInfo.nickName,
+                            userAvatarUrl: e.detail.userBaseInfo.avatarUrl,
+                            userNickName: e.detail.userBaseInfo.nickName,
                             isAuthed: true,
                         }),
-                        app.globalData.userinfo.avatarUrl = e.detail.userInfo.avatarUrl,
-                        app.globalData.userinfo.nickName = e.detail.userInfo.nickName,
-                        app.globalData.userinfo.isAuthed = true;
+                        app.globalData.userBaseInfo.avatarUrl = e.detail.userBaseInfo.avatarUrl,
+                        app.globalData.userBaseInfo.nickName = e.detail.userBaseInfo.nickName,
+                        app.globalData.userBaseInfo.isAuthed = true;
                 }
             })
         }
@@ -227,7 +235,7 @@ Page({
   submitProfile: function (e) {
           var time = new Date();
           console.log(this.data)
-          userInfoCollection.add({
+          userBaseInfoCollection.add({
               data: {
                   userAvatarUrl: this.data.avatarUrl,
                   userNickName: this.data.nickName,
@@ -237,9 +245,9 @@ Page({
                   userOriginCode: app.globalData.userOriginCode,
               },
               success: res => {
-                      app.globalData.userinfo.avatarUrl = e.detail.userInfo.avatarUrl,
-                      app.globalData.userinfo.nickName = e.detail.userInfo.nickName,
-                      app.globalData.userinfo.isAuthed = true;
+                      app.globalData.userBaseInfo.avatarUrl = e.detail.userBaseInfo.avatarUrl,
+                      app.globalData.userBaseInfo.nickName = e.detail.userBaseInfo.nickName,
+                      app.globalData.userBaseInfo.isAuthed = true;
                       this.setData({typeS: false})
               }
           })

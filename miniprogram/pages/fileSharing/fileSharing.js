@@ -2,18 +2,54 @@ var app = getApp();
 
 const db = wx.cloud.database()
 const competeTipsCollection = db.collection('fileShare')
+let rewardedVideoAd = null
 Page({
     data: {
         showTipsDeatil: false,
         active: 1,
         baiduPanUrl: '',
+        nowProfile:'',
         fileShareButtons: [{
             text: '关闭'
         }],
-
+        feedbackDialogButtons: [{
+            text: '取消'
+        }, {
+            text: '确认兑换'
+        }],
         competeTips: [],
         hotTags: [],
         downloadRank: []
+    },
+
+    showUseProfilePopup(event) {
+        console.log(event.currentTarget)
+       
+        this.setData({
+            showUseProfile: true,
+            nowProfile: app.globalData.lastIntegralInfo.adjustAfterIntegral,
+            fileName: event.currentTarget.fileName,
+        });
+
+    },
+
+    showUseProfileClose() {
+        this.setData({
+            showUseProfile: false
+        });
+    },
+
+    tapFeedback(e) {
+        const _btn = e.detail.item.text;
+        if (_btn == '确认兑换') {
+            this.useProfile();
+            return;
+        }
+        this.showUseProfileClose();
+    },
+    
+    useProfile(){
+
     },
 
     showTipsDetail(event) {
@@ -35,6 +71,7 @@ Page({
             baiduPanUrl: event.currentTarget.id,
         });
     },
+
 
     tapFileDetail(e) {
         const _btn = e.detail.item.text;
@@ -105,5 +142,38 @@ Page({
                 show: false
             });
         })
+
+        if(wx.createRewardedVideoAd){
+            rewardedVideoAd = wx.createRewardedVideoAd({ adUnitId: 'adunit-2d7e5a8bd48d29ce' })
+            rewardedVideoAd.onLoad(() => {
+                console.log('激励视频 广告加载成功')
+            })
+            rewardedVideoAd.onError((err) => {
+              console.log('onError event emit', err)
+            })
+            rewardedVideoAd.onClose(res => {
+                // 用户点击了【关闭广告】按钮
+                if (res && res.isEnded) {
+                  // 正常播放结束，可以下发游戏奖励
+                  app.addUserAdvertInfo(app.globalData)
+                } else {
+                  // 播放中途退出，不下发游戏奖励
+                }
+            })
+
+
+          }
     },
+    showVideoAd(){
+        rewardedVideoAd.show()
+        .catch(() => {
+            rewardedVideoAd.load()
+            .then(() => rewardedVideoAd.show())
+            .catch(err => {
+            console.log('激励视频 广告显示失败')
+            })
+        })
+    },
+
+
 })

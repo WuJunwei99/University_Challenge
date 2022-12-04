@@ -1,4 +1,5 @@
 // pages/add/add.js
+//const cloud = require('wx-server-sdk')
 const db = wx.cloud.database()
 const testCollection = db.collection('test')
 const competeTipsCollection = db.collection('competeTips')

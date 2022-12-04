@@ -11,6 +11,12 @@
 
   <view class="container">
     <view class="cell-group-container">
+     <view class="cell-container" bindtap="showFeedbackPopup">
+        <image class="cell-left-image" src="/image/text.bubble@3x.png" />
+        <text class="cell-left-text">我的积分</text>
+        <image class="cell-right-image" src="/image/chevron.right@3x.png" />
+      </view>
+
       <view class="cell-container" bindtap="showFeedbackPopup">
         <image class="cell-left-image" src="/image/text.bubble@3x.png" />
         <text class="cell-left-text">意见反馈</text>
@@ -25,6 +31,14 @@
         <image class="cell-right-image" src="/image/chevron.right@3x.png" />
       </view>
     </view>
+
+    <mp-dialog show="{{showIntegral}}" title="积分详情" buttons="{{aboutDialogButtons}}" bindbuttontap="tapAbout">
+      <view style="height: 60%;">
+        <van-cell-group>
+          <van-field value="{{ suggestInfo }}" placeholder="请输入您想反馈的内容" border="{{ false }}" input-align="left" size="large" type="textarea" autosize fixed="true" clearable bind:input="inputSuggestInfo" />
+        </van-cell-group>
+      </view>
+    </mp-dialog>
 
     <mp-dialog show="{{showFeedback}}" title="意见反馈" buttons="{{feedbackDialogButtons}}" bindbuttontap="tapFeedback">
       <view style="height: 60%;">

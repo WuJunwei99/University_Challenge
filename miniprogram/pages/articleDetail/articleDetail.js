@@ -2,6 +2,7 @@
 const db = wx.cloud.database()
 const testCollection = db.collection('test')
 const _ = db.command
+var app = getApp();
 Page({
 
     /**
@@ -53,18 +54,11 @@ Page({
         })
     },
     onShareAppMessage: function (res) {
-        var that = this;
+        console.log("转发成功")
+        app.addUserShareInfo(app.globalData)
         return {
             title: '',
-            path: '/pages/home/home',
-            success: function (res) {
-                // 转发成功
-
-                that.shareClick();
-            },
-            fail: function (res) {
-                // 转发失败
-            }
+            path: '/pages/home/home'
         }
     },
 

@@ -159,14 +159,34 @@ Page({
         }
     },
     onShareAppMessage: function (res) {
-        var that = this;
+        // 转发成功
+        console.log("转发成功")
+        app.addUserShareInfo(app.globalData)
+        // let promise = app.addUserEventInfo("share")
+        // promise.then((res) => {
+        //     var shareId = res._id
+        //     if(app.globalData.todayIngegral){
+        //         var todayShareCount = app.globalData.todayIngegral.find(function(item,index){
+        //             if(item._id === "share"){
+        //                 return item._adjustNum
+        //             }
+        //             return 0;
+        //         })
+        //         if(!todayShareCount || (todayShareCount && todayShareCount <3)){
+        //             app.addIntegralInfo("share",1,shareId)
+        //         }
+        //     }
+        // },(error) => {
+        //     console.log("shareId",error);
+        // })
+       
+        
+        
         return {
             title: '',
             path: '/pages/home/home',
             success: function (res) {
-                // 转发成功
 
-                that.shareClick();
             },
             fail: function (res) {
                 // 转发失败
