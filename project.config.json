@@ -18,7 +18,7 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "nodeModules": true
+        "ignoreUploadUnusedFiles": true
     },
     "appid": "wx7704a9323416a1d7",
     "projectname": "%E6%96%B0%E7%9A%84%E5%B0%8F%E7%A8%8B%E5%BA%8F",
